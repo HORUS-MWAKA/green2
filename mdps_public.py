@@ -103,7 +103,7 @@ if (selected == 'Aeration Prediction'):
     
     if st.button('Aeration Test Result'):
         #heart_prediction = logic_aeration_model.predict([[Temperature, Humidity, Moisture, Aeration]])     
-        heart_prediction = logic_aeration_model.predict([[33,67,25,0]) 
+        heart_prediction = logic_aeration_model.predict([[33,67,25,0]]) 
         
         if (heart_prediction[0] == 1):
           heart_diagnosis = 'Aeration Needed'
