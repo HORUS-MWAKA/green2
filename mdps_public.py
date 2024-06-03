@@ -13,7 +13,7 @@ from streamlit_option_menu import option_menu
 
 # loading the saved models
 #logic_watering_model = joblib.load('magic_joblib.sav')
-logic_watering_model = pickle.load(open('logic_aeration_model.sav', 'rb'))
+logic_watering_model = pickle.load(open('logic_watering_model.sav', 'rb'))
 
 logic_aeration_model = pickle.load(open('logic_aeration_model.sav', 'rb'))
 
