@@ -6,13 +6,14 @@ Created on Sun May  8 21:01:15 2022
 """
 
 import pickle
+import joblib
 import streamlit as st
 from streamlit_option_menu import option_menu
 
 
 # loading the saved models
-
-logic_watering_model = pickle.load(open('logic_watering_model1.sav', 'rb'))
+logic_watering_model = joblib.load('magic_joblib.pkl')
+#logic_watering_model = pickle.load(open('logic_watering_model1.sav', 'rb'))
 
 logic_aeration_model = pickle.load(open('logic_aeration_model.sav', 'rb'))
 
