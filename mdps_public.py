@@ -13,8 +13,8 @@ from streamlit_option_menu import option_menu
 
 # loading the saved models
 #logic_watering_model = joblib.load('magic_joblib.sav')
-logic_watering_model = pickle.load(open('logic_aeration_model.sav', 'rb'))
-
+#logic_watering_model = pickle.load(open('logic_aeration_model.sav', 'rb'))
+model=pickle.load(open('logic_aeration_model.sav', 'rb'))
 logic_aeration_model = pickle.load(open('logic_aeration_model.sav', 'rb'))
 
 #parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
@@ -62,7 +62,7 @@ if (selected == 'Watering Prediction'):
     
     if st.button('Watering Test Result'):
         st.write(Temperature,Humidity,Moisture,Watering)
-        diab_prediction = logic_watering_model.predic([[Temperature, Humidity, Moisture, Watering]])
+        diab_prediction = model.predic([[Temperature, Humidity, Moisture, Watering]])
        
         #diab_prediction = logic_watering_model.predict([[33,67,25,0]]) 
         st.write(diab_prediction)
