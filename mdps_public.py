@@ -66,10 +66,10 @@ if (selected == 'Watering Prediction'):
         
         #diab_prediction = logic_watering_model.predict([[33,67,25,0]]) 
         st.write(diab_prediction)
-        #if (diab_prediction[0] == 1):
-          #diab_diagnosis = 'Aeration Needed'
-        #else:
-          #diab_diagnosis = 'Aeration not needed'
+        if (diab_prediction[0] == 1):
+          diab_diagnosis = 'Aeration Needed'
+        else:
+          diab_diagnosis = 'Aeration not needed'
         
     st.success(diab_diagnosis)
 
