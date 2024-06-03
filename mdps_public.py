@@ -43,7 +43,8 @@ if (selected == 'Watering Prediction'):
     col1, col2 = st.columns(2)
 
     with col1:
-        Temperature = st.text_input('Temperature')
+        Temperature = st.text_input(label="TEMP")
+        #Temperature = st.text_input('Temperature')
 
     with col2:
         Humidity = st.text_input('Humidity')
