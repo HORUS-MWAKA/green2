@@ -61,8 +61,9 @@ if (selected == 'Watering Prediction'):
     # creating a button for Prediction
     
     if st.button('Watering Test Result'):
+        
         #diab_prediction = logic_watering_model.predict([[Temperature, Humidity, Moisture, Watering]])
-         diab_prediction = logic_aeration_model.predict([[33,67,25,0]]) 
+        diab_prediction = logic_aeration_model.predict([[33,67,25,0]]) 
         
         if (diab_prediction[0] == 1):
           diab_diagnosis = 'Aeration Needed'
